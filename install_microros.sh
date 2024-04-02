@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -x
-set -e
+set -ex
 
 if [ -z ${ROS_DISTRO} ]; then
   echo ROS_DISTRO not set

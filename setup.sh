@@ -1,9 +1,9 @@
 #!/bin/bash
 #set -x
-set -e
+set -ex
 unset AMENT_PREFIX_PATH
 
-export ROS_DISTRO=humble
+export ROS_DISTRO=iron
 
 board=esp32
 #board=esp32_devkitc_wroom

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 tmpname=`readlink -f  $0`
 prgdir=`dirname $tmpname`
 
@@ -8,7 +8,9 @@ applyPatches()
 {
     if [ -d $1 ]; then
         pushd $1
+        echo Current Directory is `pwd`
         for x in $prgdir/$2/*; do
+            echo "patch -p 1 < $x"
             patch -p 1 < $x
         done
         popd
